@@ -269,6 +269,46 @@
             "stylesData": ""
         },
         {
+            "name": "LedDisplayComponent",
+            "id": "component-LedDisplayComponent-3f339f17fd967a809d8c0bece4af5ea2a500cbd5dc3afd80117565e260d579f78be9d7e44f810998bb7534bf489b3b7b28a18f2c6f55b54fc396b81a6bc6c5c3",
+            "file": "src/app/led-display/led-display.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-led-display",
+            "styleUrls": [
+                "./led-display.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./led-display.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-led-display',\n  templateUrl: './led-display.component.html',\n  styleUrls: ['./led-display.component.scss']\n})\nexport class LedDisplayComponent {\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "\r\n:host {\r\n  display: block;\r\n  background-color: black;\r\n  position: relative;\r\n  width: 48px;\r\n  height: 64px;\r\n}\r\n\r\n.bar {\r\n  background-color: red;\r\n  position: absolute;\r\n\r\n  &.horizontal {\r\n    width: 32px;\r\n    height: 4px;\r\n  }\r\n\r\n  &.vertical {\r\n    width: 4px;\r\n    height: 32px;\r\n  }\r\n\r\n  &#top {\r\n    top: 4px;\r\n    left: 8px;\r\n  }\r\n\r\n  &#top-left {\r\n    top: 8px;\r\n    left: 4px;\r\n  }\r\n\r\n  &#top-right {\r\n    top: 8px;\r\n    right: 4px;\r\n  }\r\n\r\n  &#middle {\r\n    top: 24px;\r\n    left: 8px;\r\n  }\r\n\r\n  &#bottom-left {\r\n    bottom: 8px;\r\n    left: 4px;\r\n  }\r\n\r\n  &#bottom-right {\r\n    bottom: 8px;\r\n    right: 4px;\r\n  }\r\n\r\n  &#bottom {\r\n    bottom: 4px;\r\n    left: 8px;\r\n  }\r\n}\r\n",
+                    "styleUrl": "./led-display.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div id=\"top\" class=\"bar horizontal\"></div>\n<div id=\"top-left\" class=\"bar vertical\"></div>\n<div id=\"top-right\" class=\"bar vertical\"></div>\n<div id=\"middle\" class=\"bar horizontal\"></div>\n<div id=\"bottom-left\" class=\"bar vertical\"></div>\n<div id=\"bottom-right\" class=\"bar vertical\"></div>\n<div id=\"bottom\" class=\"bar horizontal\"></div>\n"
+        },
+        {
             "name": "PageComponent",
             "id": "component-PageComponent-7126d8c2607c946741c651482413b43feb72b2d63cac9d3ac173fde206a5e635eb4cdbf7ca7ac9327c7d4d05cf7ef619144c34c11609ad677081d0ee4e855064",
             "file": "src/stories/page.component.ts",
@@ -393,6 +433,50 @@
                     "elements": []
                 }
             ]
+        },
+        {
+            "name": "LedDisplayModule",
+            "id": "module-LedDisplayModule-bca24a0d92f2163609739e854c9ab0689baa5d9cd95df1762667154bd331f841f081b1f091da94e13fd725866d07d07d2952651def9a7d65fbc0e1f0ad7c762c",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/led-display/led-display.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { LedDisplayComponent } from './led-display.component';\n\n@NgModule({\n  declarations: [LedDisplayComponent],\n  imports: [CommonModule],\n  exports: [LedDisplayComponent],\n})\nexport class LedDisplayModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "LedDisplayComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "LedDisplayComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
         }
     ],
     "miscellaneous": {
@@ -458,6 +542,16 @@
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/led-display/led-display.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "Secondary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -481,16 +575,6 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Header>",
-                "defaultValue": "(args: Header) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -501,11 +585,31 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Header>",
+                "defaultValue": "(args: Header) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/Page.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<Page>",
                 "defaultValue": "(args: Page) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/led-display/led-display.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<LedDisplayComponent>",
+                "defaultValue": "(args: LedDisplayComponent) => ({\n  props: args,\n})"
             }
         ],
         "functions": [],
@@ -627,6 +731,28 @@
                     "type": "Story<Page>",
                     "defaultValue": "(args: Page) => ({\n  props: args,\n})"
                 }
+            ],
+            "src/app/led-display/led-display.component.stories.ts": [
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/led-display/led-display.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/led-display/led-display.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<LedDisplayComponent>",
+                    "defaultValue": "(args: LedDisplayComponent) => ({\n  props: args,\n})"
+                }
             ]
         },
         "groupedFunctions": {},
@@ -635,7 +761,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 5,
+        "count": 4,
         "status": "low",
         "files": [
             {
@@ -645,6 +771,35 @@
                 "name": "AppComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/led-display/led-display.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/led-display/led-display.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/led-display/led-display.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "LedDisplayComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {

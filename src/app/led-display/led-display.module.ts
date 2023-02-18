@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgForOf } from '@angular/common';
 import { LedDisplayComponent } from './led-display.component';
 
 @NgModule({
   declarations: [LedDisplayComponent],
-  imports: [CommonModule],
+  imports: [NgForOf],
   exports: [LedDisplayComponent],
 })
 export class LedDisplayModule {}

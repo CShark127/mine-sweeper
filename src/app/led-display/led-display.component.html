@@ -1,7 +1,9 @@
-<div id="top" class="bar horizontal"></div>
-<div id="top-left" class="bar vertical"></div>
-<div id="top-right" class="bar vertical"></div>
-<div id="middle" class="bar horizontal"></div>
-<div id="bottom-left" class="bar vertical"></div>
-<div id="bottom-right" class="bar vertical"></div>
-<div id="bottom" class="bar horizontal"></div>
+<div *ngFor="let digit of [].constructor(numberOfDigits)" class="digit">
+  <div id="top" class="bar horizontal"></div>
+  <div id="top-left" class="bar vertical"></div>
+  <div id="top-right" class="bar vertical"></div>
+  <div id="middle" class="bar horizontal"></div>
+  <div id="bottom-left" class="bar vertical"></div>
+  <div id="bottom-right" class="bar vertical"></div>
+  <div id="bottom" class="bar horizontal"></div>
+</div>

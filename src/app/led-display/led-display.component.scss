@@ -1,5 +1,9 @@
 
 :host {
+  display: flex
+}
+
+.digit {
   display: block;
   background-color: black;
   position: relative;

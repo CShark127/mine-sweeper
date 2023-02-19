@@ -14,6 +14,7 @@
 .bar {
   background-color: red;
   position: absolute;
+  display: none;
 
   &.horizontal {
     width: 32px;
@@ -59,4 +60,8 @@
     bottom: 4px;
     left: 8px;
   }
+}
+
+.show {
+  display: block;
 }

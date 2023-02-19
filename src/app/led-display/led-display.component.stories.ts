@@ -11,6 +11,18 @@ export default {
       imports: [LedDisplayModule],
     }),
   ],
+  argTypes: {
+    value: {
+      control: {
+        type: 'number',
+      },
+    },
+    numberOfDigits: {
+      control: {
+        type: 'number',
+      },
+    },
+  },
 };
 
 const Template: Story<LedDisplayComponent> = (args: LedDisplayComponent) => ({

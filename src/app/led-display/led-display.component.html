@@ -1,9 +1,35 @@
-<div *ngFor="let digit of [].constructor(numberOfDigits)" class="digit">
-  <div id="top" class="bar horizontal"></div>
-  <div id="top-left" class="bar vertical"></div>
-  <div id="top-right" class="bar vertical"></div>
-  <div id="middle" class="bar horizontal"></div>
-  <div id="bottom-left" class="bar vertical"></div>
-  <div id="bottom-right" class="bar vertical"></div>
-  <div id="bottom" class="bar horizontal"></div>
+<div *ngFor="let digit of _digits.reverse()" class="digit">
+  <ng-container *ngIf="digit">
+    <div [ngClass]="{ show: digit.top }" id="top" class="bar horizontal"></div>
+    <div
+      [ngClass]="{ show: digit.topLeft }"
+      id="top-left"
+      class="bar vertical"
+    ></div>
+    <div
+      [ngClass]="{ show: digit.topRight }"
+      id="top-right"
+      class="bar vertical"
+    ></div>
+    <div
+      [ngClass]="{ show: digit.middle }"
+      id="middle"
+      class="bar horizontal"
+    ></div>
+    <div
+      [ngClass]="{ show: digit.bottomLeft }"
+      id="bottom-left"
+      class="bar vertical"
+    ></div>
+    <div
+      [ngClass]="{ show: digit.bottomRight }"
+      id="bottom-right"
+      class="bar vertical"
+    ></div>
+    <div
+      [ngClass]="{ show: digit.bottom }"
+      id="bottom"
+      class="bar horizontal"
+    ></div>
+  </ng-container>
 </div>

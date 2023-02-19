@@ -4,7 +4,7 @@ import { LedDisplayComponent } from './led-display.component';
 
 @NgModule({
   declarations: [LedDisplayComponent],
-  imports: [NgForOf],
+  imports: [CommonModule],
   exports: [LedDisplayComponent],
 })
 export class LedDisplayModule {}
